@@ -1,11 +1,17 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-header{
+
+html {
+  font-family: 'Barlow', sans-serif;
+}
+
+header {
   font-size: 20px;
 }
-nav ul{
+
+nav ul {
   position: fixed;
   top: 0;
   background: white;
@@ -14,69 +20,102 @@ nav ul{
   height: 50px;
   text-align: left;
 }
+
 nav ul a {
   text-decoration: none;
-  color:black;
-  padding:10px 15px 10px 0;
+  color: black;
+  padding: 10px 15px 10px 0;
 }
-nav li{
-  display:inline;
+
+nav li {
+  display: inline;
   list-style-type: none;
   padding-left: 15px;
 }
+
 section {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items:center;
-  height: 100vh;
-}
-article {
-  color: black;
-  width:600px;
-  margin-left:150px;
-  text-align:justify;
-}
-article p{
-  padding-top: 10px;
-}
-img{
-  width: 60px;
-}
-aside{
   display: flex;
   flex-direction: row;
-  align-items:center;
-  justify-content:center;
-  width:400px;
-  margin-right:150px;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+article {
+  color: white;
+  width: 600px;
+  margin-left: 150px;
+  text-align: justify;
+}
+
+article p {
+  padding-top: 10px;
+}
+
+img {
+  width: 60px;
+}
+
+aside {
+  display: flex;
   min-height: 100vh;
 }
-aside ul li{
+
+aside ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 150px;
+}
+
+aside ul li {
   display: inline-block;
-  margin: 30px;
+  margin: 10px;
 }
-p,h2,nav{
-  font-family: 'Barlow', sans-serif;
+
+aside ul p {
+  display: inline-block;
+  margin: 10px;
 }
-background{
-  background-color:white;
+
+background {
+  background-color: white;
   background-repeat: no-repeat;
   background-size: auto;
 }
-#Brazilian{
-  background-image: url("brasil1.png");
+
+#StarWars {
+  background-color: #07204f;
+}
+
+#Animals {
+  background-color: #cc6c2c;
   background-position: bottom;
 }
-#Italian{
-  background-image: url("italy.png");
+
+#People {
+  background-color: #7c092c;
   background-position: bottom;
 }
-#French{
-  background-image: url("paris.png");
-  background-position: bottom;
-}
-.Sound{
+
+.Sound {
   font-weight: 900;
   font-size: 1.5em;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.sound {
+  border-radius: 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+  color: white;
+  background: #08658e;
 }
