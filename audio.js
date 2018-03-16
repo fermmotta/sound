@@ -1,3 +1,4 @@
+//create an array of all of the sound links.  If it has a sound class, we add it to keys
 const keys = document.querySelectorAll('.sound');
 //create an array off all of the nav elements.  If its in the header navigtion and its an <a/> we add it to instruments
 const instruments = document.querySelectorAll('header>nav>a');
@@ -16,22 +17,25 @@ function clickSound(e) {
 function switchInstrument(e) {
   //e.preventDefault() tells the page not to reload
   e.preventDefault();
-  //we define inst1 and inst2 to represent they instrument1 and 2 sections from our page
+  //we define inst1, inst2 and inst3 to represent they instrument1,2 and 3 sections from our page
   let inst1 = document.querySelector('#instrument1');
   let inst2 = document.querySelector('#instrument2');
   let inst3 = document.querySelector('#instrument3');
   //instrument holds the value of data-instrument from the link the user clicked on
   let instrument = e.target.dataset['instrument'];
-  //if the user clicked on instrument1, we turn on instrument 1 and turn off instrument2
+  //if the user clicked on instrument1, we turn on instrument 1 and turn off instrument2 and 3
   if (instrument == "instrument1") {
     inst1.style.display = "flex";
     inst2.style.display = "none";
+    inst3.style.display = "none";
     //return tells the function to stop running
     return;
   }
-  //if the user didn't select instrument1, they end up here, where we turn off instrument1 and turn on instrument2
+
+  //if the user didn't select instrument1, they end up here, where we turn off instrument1 and 3 and turn on instrument2
   inst1.style.display = "none";
   inst2.style.display = "flex";
+  inst3.style.display = "none";
 }
 
 //this command looks at the keys array.  It goes through each entry and adds a listener for click events
@@ -46,25 +50,3 @@ keys.forEach(function(key) {
 instruments.forEach(function(instrument) {
   instrument.addEventListener("click", switchInstrument);
 });
-
-
-
-
-
-
-
-
-
-let sect1 = "I am section1";
-let sect2 = "I am section2";
-let sect3 = "I am section3";
-
-let mySection = sect2;
-
-if (mySection == sect1) {
-  console.log("turn on 1, turn off 2 and 3");
-} else if (mySection == sect2) {
-  console.log("turn on 2, turn off 1 and 3");
-} else {
-  console.log("turn on 3, turn off 1 and 2");
-}
