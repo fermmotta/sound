@@ -73,8 +73,7 @@ aside ul li {
   margin: 10px;
 }
 
-/* setting hover to black
-to get more attention */
+/* setting hover black to sounds */
 
 aside ul li a:hover {
   background-color: black;
@@ -86,19 +85,19 @@ h2 {
 
 /* styling background for each section */
 
-#StarWars {
+#starwars{
   background-image: url("starwars.jpg");
 }
 
-#Animals {
+#animal{
   background-image: url("animals.jpg");
 }
 
-#People {
+#people {
   background-image: url("people.jpg");
 }
 
-/* setting font weight and size for Sounboard on nav */
+/* setting font weight and size for 'Sounboard' on nav */
 
 .Sound {
   font-weight: 900;
@@ -113,8 +112,7 @@ h2 {
   letter-spacing: .1rem;
   border-radius: 1rem;
   margin: 1rem;
-  padding: 1rem;
-  width: 10rem;
+  padding: 2rem;
   text-align: center;
   color: white;
   background: #08658e;
