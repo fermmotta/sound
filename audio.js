@@ -1,7 +1,7 @@
 //create an array of all of the sound links.  If it has a sound class, we add it to keys
 const keys = document.querySelectorAll('.sound');
 //create an array off all of the nav elements.  If its in the header navigtion and its an <a/> we add it to instruments
-const instruments = document.querySelectorAll('header>nav>a');
+const instruments = document.querySelectorAll('header>nav>ul>a');
 
 function clickSound(e) {
   //e.target is the sound the user clicked on, dataset['sound'] looks for the value of data-sound in the element the user clicked
@@ -24,18 +24,17 @@ function switchInstrument(e) {
   //instrument holds the value of data-instrument from the link the user clicked on
   let instrument = e.target.dataset['instrument'];
   //if the user clicked on instrument1, we turn on instrument 1 and turn off instrument2 and 3
-  if (instrument == "instrument1") {
+  if(instrument=="instrument1"){
     inst1.style.display = "flex";
     inst2.style.display = "none";
     inst3.style.display = "none";
     //return tells the function to stop running
     return;
   }
-
   //if the user didn't select instrument1, they end up here, where we turn off instrument1 and 3 and turn on instrument2
-  inst1.style.display = "none";
-  inst2.style.display = "flex";
-  inst3.style.display = "none";
+    inst1.style.display = "none";
+    inst2.style.display = "flex";
+    inst3.style.display = "none";
 }
 
 //this command looks at the keys array.  It goes through each entry and adds a listener for click events
