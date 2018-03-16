@@ -3,6 +3,8 @@
   padding: 0;
 }
 
+/*  setting the base html styling*/
+
 html {
   font-family: 'Barlow', sans-serif;
 }
@@ -10,6 +12,8 @@ html {
 header {
   font-size: 20px;
 }
+
+/* setting the navigation bar to be fixed to the top of the screen */
 
 nav ul {
   position: fixed;
@@ -21,6 +25,8 @@ nav ul {
   text-align: left;
 }
 
+/* removing the bullets from the list items */
+
 nav ul a {
   text-decoration: none;
   color: black;
@@ -29,9 +35,11 @@ nav ul a {
 
 nav li {
   display: inline;
-  list-style-type: none;
   padding-left: 15px;
 }
+
+/*  setting section styling
+setting height to fit in the page */
 
 section {
   display: flex;
@@ -41,81 +49,74 @@ section {
   height: 100vh;
 }
 
+/* setting article styling and
+width so text doesn't interfere on aside items */
+
 article {
   color: white;
-  width: 600px;
-  margin-left: 150px;
+  width: 500px;
   text-align: justify;
 }
 
-article p {
-  padding-top: 10px;
-}
-
-img {
-  width: 60px;
-}
-
-aside {
-  display: flex;
-  min-height: 100vh;
-}
+/* setting the flex direction so sounds can be in a row */
 
 aside ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-right: 150px;
 }
+
+/* removing the bullets from the list items
+and setting a margin */
 
 aside ul li {
-  display: inline-block;
+  list-style-type: none;
   margin: 10px;
 }
 
-aside ul p {
-  display: inline-block;
-  margin: 10px;
+/* setting hover to black
+to get more attention */
+
+aside ul li a:hover {
+  background-color: black;
 }
 
-background {
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: auto;
+h2 {
+  padding-bottom: 10px;
 }
+
+/* styling background for each section */
 
 #StarWars {
-  background-color: #07204f;
+  background-image: url("starwars.jpg");
 }
 
 #Animals {
-  background-color: #cc6c2c;
-  background-position: bottom;
+  background-image: url("animals.jpg");
 }
 
 #People {
-  background-color: #7c092c;
-  background-position: bottom;
+  background-image: url("people.jpg");
 }
+
+/* setting font weight and size for Sounboard on nav */
 
 .Sound {
   font-weight: 900;
   font-size: 1.5em;
 }
 
-.sound {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-}
+/* styling for sound class */
 
 .sound {
+  font-size:1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
   border-radius: 1rem;
   margin: 1rem;
-  font-size: 1rem;
-  padding: 10px;
-  width: 400px;
+  padding: 1rem;
+  width: 10rem;
   text-align: center;
   color: white;
   background: #08658e;
+
 }
